@@ -16,6 +16,12 @@ firstNameInput.onkeyup = function (event) {
   }
 };
 
+
+const shortMessage = document.getElementById("shortName")
+const suitableMessage = document.getElementById("suitableName")
+
+
+
 //   firstNameInputValue,length >= 5 ? signUpButton.disabled = false : signUpButton.disabled = true;
 
 
