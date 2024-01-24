@@ -1,40 +1,20 @@
-
-
 const firstNameInput = document.getElementById("first-name");
-const signUpButton = document.getElementById("submit");
+const signUpButton = document.getElementById("signup-BTN");
+const errorMessage = document.getElementById("error-Message");
 
 console.log("firstNameInput: ", firstNameInput);
 console.log("signUpBTN: ", signUpButton);
 
 firstNameInput.onkeyup = function (event) {
-  let firstNameInputValue = event.target.value.length;
+    let firstNameInputValue = event.target.value;
 
-  if (firstNameInputValue >= 5) {
-    signUpButton.disabled = false;
-  } else {
-    signUpButton.disabled = true;
-  }
+    if (firstNameInputValue.length >= 5) {
+      signUpButton.disabled = false;
+      errorMessage.innerHTML = "Your name is suitable";
+      errorMessage.style.backgroundColor = "green";
+    } else {
+      signUpButton.disabled = true;
+      errorMessage.innerHTML = "Your name is too short";
+      errorMessage.style.backgroundColor = "red";
+    }
 };
-
-
-const shortMessage = document.getElementById("shortName")
-const suitableMessage = document.getElementById("suitableName")
-
-
-
-//   firstNameInputValue,length >= 5 ? signUpButton.disabled = false : signUpButton.disabled = true;
-
-
-// const input = document.getElementById('first-name');
-// const button = document.getElementById('submit');
-
-// console.log("firstNameInput: ",firstNameInput);
-// console.log("formSignUpBTN: ",formSignupBTN);
-
-// function
-
-// if (input.value.length >= 5) {
-//     button.disabled = false;
-// } else {
-//     button.disabled = true;
-// }
