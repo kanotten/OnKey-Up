@@ -1,15 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>OnKey Up</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+  </head>
+  <body>
+    <main>
+      <form>
+        <label for="first-name">
+            First name:
+        </label>
 
-</head>
-<body>
-    <input type="text" onkeyup="MyFunction"/>
-    <script src='main.js'></script>
-</body>
+        <input type="text" id="first-name" onKeyUp="MyFunction"/>
+        <button type="button" id="submitBtn" disabled>Click Me!</button>
+      </form>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
 </html>
